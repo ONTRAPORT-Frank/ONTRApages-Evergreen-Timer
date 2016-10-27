@@ -1,4 +1,8 @@
+<script>
 // Step sequence Rule fills [My Custom Date Field] with today's date
+// Contact is sent PURL to the page this code is on
+// ONTRApage has Countdown Timer block and this code in the Settings > Custom Footer Code section
+
 var customDate = "[My Custom Date Field]", 
 countdowns = document.getElementsByTagName("ontraport-countdown"); 
 
@@ -22,3 +26,4 @@ if ( customDate != "" && countdowns && countdowns.length > 0 ) {
     countdowns[i].removeAttribute( "then" ); 
   }
 } 
+</script>
