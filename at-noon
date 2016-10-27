@@ -1,0 +1,24 @@
+// Step sequence Rule fills [My Custom Date Field] with today's date
+var customDate = "[My Custom Date Field]", 
+countdowns = document.getElementsByTagName("ontraport-countdown"); 
+
+// create date from customDate for date math
+var nwdate = new Date( customDate );
+
+// adding one day ... change +1 for the number of days to add
+nwdate.setDate(nwdate.getDate()+1);
+
+// converting linux date to right format for timer
+// currenty sets date to the day at noon
+
+customDate = nwdate.toString();
+
+if ( customDate != "" && countdowns && countdowns.length > 0 ) { 
+  var cdate = new Date( customDate ); 
+  for( var i=0; i < countdowns.length; i++ ) { 
+    countdowns[i].setAttribute( "year", cdate.getFullYear() ); 
+    countdowns[i].setAttribute( "month", ( cdate.getMonth() + 1 ) ); 
+    countdowns[i].setAttribute( "day", cdate.getDate() ); 
+    countdowns[i].removeAttribute( "then" ); 
+  }
+} 
