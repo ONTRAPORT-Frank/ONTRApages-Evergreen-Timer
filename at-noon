@@ -9,7 +9,7 @@ var nwdate = new Date( customDate );
 nwdate.setDate(nwdate.getDate()+1);
 
 // converting linux date to right format for timer
-// currenty sets date to the day at noon
+// currenty sets date to the future day at noon
 
 customDate = nwdate.toString();
 
